@@ -55,7 +55,7 @@ function numberOfOdds(num) {
   // write your code here & return
 
   // this does not require a for loop
-  // return num / 2;
+  // return Math.floor(num / 2);
   // is all the code that's required here, and saves considerable time and memory
 
   let total = 0;
