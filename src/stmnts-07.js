@@ -14,6 +14,7 @@
  */
 function logicalAnd(a, b) {
   // write your code here & return
+  return a && b;
 }
 
 /**
@@ -24,6 +25,7 @@ function logicalAnd(a, b) {
  */
 function logicalOr(a, b) {
   // write your code here & return
+  return a || b;
 }
 
 /**
@@ -33,6 +35,7 @@ function logicalOr(a, b) {
  */
 function invertBoolean(bool) {
   // write your code here & return
+  return !bool;
 }
 
 /**
@@ -50,6 +53,16 @@ function invertBoolean(bool) {
  */
 function numberOfOdds(num) {
   // write your code here & return
+
+  // this does not require a for loop
+  // return num / 2;
+  // is all the code that's required here, and saves considerable time and memory
+
+  let total = 0;
+  for (let i = 0; i < num; i += 1) {
+    if (i % 2 === 1) total += 1;
+  }
+  return total;
 }
 
 /**
@@ -63,6 +76,9 @@ function numberOfOdds(num) {
  */
 function addUpTheNumbers(num) {
   // write your code here & return
+  let total = 0;
+  for (let i = 0; i <= num; i += 1) total += i;
+  return total;
 }
 
 /**
@@ -82,6 +98,13 @@ function addUpTheNumbers(num) {
  */
 function gradeGenerator(score) {
   // write your code here & return
+  let grade = '';
+  if (score < 60) grade = 'F';
+  else if (score < 70) grade = 'D';
+  else if (score < 80) grade = 'C';
+  else if (score < 90) grade = 'B';
+  else grade = 'A';
+  return grade;
 }
 
 /**
@@ -101,6 +124,10 @@ function gradeGenerator(score) {
  */
 function getGrade(name, score) {
   // write your code here & return
+  const letterGrade = gradeGenerator(score);
+  if (letterGrade === 'A' || letterGrade === 'F')
+    return `${name} got an ${letterGrade}`;
+  return `${name} got a ${letterGrade}`;
 }
 
 module.exports = {
